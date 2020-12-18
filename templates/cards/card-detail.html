@@ -1,0 +1,10 @@
+{% extends '_base.html' %} {% block content %}
+
+<h1>{{ card.title }}</h1>
+<h2>Author: {{ card.author }}</h2>
+<p>{{ card.body }}</p>
+<a href="{% url 'card_update' card.pk %}">+ Edit card</a>
+<a href="{% url 'card_delete' card.pk %}">+ Delete card</a>
+<a href="{% url 'card_list'  %}">+ Back Home</a>
+
+{% endblock content %}
